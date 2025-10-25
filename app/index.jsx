@@ -1,5 +1,5 @@
 import { getCurrentPositionAsync, requestForegroundPermissionsAsync } from "expo-location";
-import { CloudIcon, CloudRainIcon, GpsFix, MapPin, SnowflakeIcon, SunIcon } from "phosphor-react-native";
+import { CloudIcon, CloudRainIcon, GpsFixIcon, MapPin, MapPinIcon, SnowflakeIcon, SunIcon } from "phosphor-react-native";
 import { useEffect, useState } from "react";
 import { Alert, ImageBackground, Modal, ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import MapView, { Marker } from "react-native-maps";
@@ -108,12 +108,12 @@ useEffect(function(){
                         <Text style={styles.text1}>
                             Current Location:
                         </Text>
-                        <GpsFix size={24} style={styles.text1} />
+                        <GpsFixIcon size={24} style={styles.text1} />
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.container2} onPress={openMap}>
                         <Text style={styles.text1}>
                             Choose on map:</Text>
-                        <MapPin size={24} style={styles.text1} />
+                        <MapPinIcon size={24} style={styles.text1} />
                     </TouchableOpacity>
                 </View>
                 <Modal visible={showMap} transparent={true}>
@@ -150,7 +150,7 @@ useEffect(function(){
                                 }}>
                                     Confirm Location :
                                 </Text>
-                                <Text><MapPin size={14} style={styles.text1} /></Text>
+                                <Text><MapPinIcon size={14} style={styles.text1} /></Text>
                             </View>
                         </TouchableOpacity>
                     </View>
